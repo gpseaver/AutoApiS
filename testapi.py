@@ -100,7 +100,7 @@ def testapi(path,a,ls):
     print('账号 '+str(a)+'\n第 '+str(ls)+' 轮运行开始时间为 :', localtime)
     if config_list['是否开启随机api顺序'] == 'Y':
         print('总api数13个，请自行确认个数')
-	num1[a] = 0
+        num1[a] = 0
         for ra in range(14):
             rana = str(randomapi[ra])
             try:
