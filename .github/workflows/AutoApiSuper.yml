@@ -34,7 +34,6 @@ jobs:
         KEY_LIST: ${{ secrets.KEY_LIST }} # secrets_key 提供
         ID_LIST2: ${{ secrets.ID_LIST2 }} # secrets_id 提供
         KEY_LIST2: ${{ secrets.KEY_LIST2 }} # secrets_key 提供
-        SCKEY: ${{secrets.SCKEY}}
       run: | 
         echo $ID_LIST > idlist.txt
         echo $KEY_LIST > keylist.txt
@@ -45,5 +44,7 @@ jobs:
         sed -i '12 r idlist2.txt' testapi.py
         sed -i '13 r keylist2.txt' testapi.py
     - name: Test Api #Api调用
+      env:
+        SCKEY: ${{ secrets.SCKEY }}
       run: | 
         python testapi.py
