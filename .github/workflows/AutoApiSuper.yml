@@ -34,6 +34,7 @@ jobs:
         KEY_LIST: ${{ secrets.KEY_LIST }} # secrets_key 提供
         ID_LIST2: ${{ secrets.ID_LIST2 }} # secrets_id 提供
         KEY_LIST2: ${{ secrets.KEY_LIST2 }} # secrets_key 提供
+        SCKEY: ${{secrets.SCKEY}}
       run: | 
         echo $ID_LIST > idlist.txt
         echo $KEY_LIST > keylist.txt
