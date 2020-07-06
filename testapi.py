@@ -4,6 +4,7 @@ import json,sys,time,random
 #注册后一定要再点代表xxx授予管理员同意,否则outlook api无法调用
 #以下空行不要删除，以便运行时插入机密
 
+sckey = os.environ["SCKEY"]
 id_list2 = [1]
 secret_list2 = [1]
 
@@ -111,6 +112,7 @@ def testapi(path,a,ls):
             except:
                 print("pass")
                 pass
+	req.get('https://sc.ftqq.com/' + sckey + '.send?text=账号'+str(a)+'的13个api调用完成,所有api总成功'+str(num1[a])+'次')
     else:
         print('总api数10个，请自行确认个数')
         for ra in range(1,12):
