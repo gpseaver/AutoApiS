@@ -113,7 +113,7 @@ def testapi(path,a,ls):
             except:
                 print("pass")
                 pass
-      req.get('https://sc.ftqq.com/' + sckey + '.send?text=账号' + str(a) + '的13个api调用完成,所有api总成功' + str(num1[a]) + '次')
+        req.get('https://sc.ftqq.com/' + sckey + '.send?text=autoapiS的账号' + str(a) + '的13个api调用完成,所有api总成功' + str(num1[a]) + '次')
     else:
         print('总api数10个，请自行确认个数')
         for ra in range(1,12):
