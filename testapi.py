@@ -1,6 +1,6 @@
 # -*- coding: UTF-8 -*-
 import requests as req
-import json,sys,time,random
+import json,sys,time,random,os
 #注册后一定要再点代表xxx授予管理员同意,否则outlook api无法调用
 #以下空行不要删除，以便运行时插入机密
 
