@@ -18,7 +18,7 @@ jobs:
     
     steps:
     - name: Checkout
-      uses: actions/checkout@main
+      uses: actions/checkout@master
     - name: Set up Python #安装python
       uses: actions/setup-python@v1
       with:
@@ -59,7 +59,7 @@ jobs:
         git add .
         git commit -m "update new refresh_token" -a
     - name: Push changes
-      uses: ad-m/github-push-action@main
+      uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         branch: main
